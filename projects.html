@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-ar="المشاريع - طريق الخير" data-en="Projects - Road of Goodness">المشاريع - طريق الخير</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <span class="logo-text">طريق الخير</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="projects.html" class="nav-link active" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+        <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="langText">EN</span>
+        </button>
+        <a href="donate.html" class="btn btn-primary" data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="projects.html" class="mobile-link active" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+        <a href="about.html" class="mobile-link" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="mobile-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+        <a href="donate.html" class="btn btn-primary" data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section section-light" style="min-height:100vh;padding-top:80px">
+    <div class="container">
+      <!-- Header -->
+      <div style="margin-bottom:2rem">
+        <h1 style="font-size:2rem;font-weight:700;margin-bottom:0.5rem" data-ar="المشاريع" data-en="Projects">المشاريع</h1>
+        <p class="section-desc" data-ar="استعرض جميع مشاريعنا واختر المشروع الذي تود دعمه" data-en="Browse all our projects and choose the one you want to support">استعرض جميع مشاريعنا واختر المشروع الذي تود دعمه</p>
+      </div>
+
+      <!-- Filters -->
+      <div style="background:var(--color-white);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:1rem;margin-bottom:2rem">
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center">
+          <div class="filters-bar">
+            <button class="filter-btn active" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
+            <button class="filter-btn" data-filter="active" data-ar="نشط" data-en="Active">نشط</button>
+            <button class="filter-btn" data-filter="urgent" data-ar="مستعجل" data-en="Urgent">مستعجل</button>
+            <button class="filter-btn" data-filter="completed" data-ar="مكتمل" data-en="Completed">مكتمل</button>
+          </div>
+          <div class="search-wrap">
+            <input type="text" id="projectSearch" class="search-input" placeholder="ابحث عن مشروع..." style="width:100%;max-width:300px">
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Count -->
+      <p style="margin-bottom:1rem;font-size:0.875rem;color:var(--color-text-secondary)">
+        <span id="projectCount">4</span> <span data-ar="مشروع" data-en="projects">مشروع</span>
+      </p>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-status="active">
+          <div class="project-img-wrap">
+            <img src="https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg" alt="طريق قرية الأمل" class="project-img" loading="lazy">
+            <span class="status-badge status-active" data-ar="نشط" data-en="Active">نشط</span>
+          </div>
+          <div class="project-content">
+            <h3 data-ar="طريق قرية الأمل" data-en="Village of Hope Road">طريق قرية الأمل</h3>
+            <p class="project-location" data-ar="قرية الأمل - المنطقة الشمالية" data-en="Village of Hope - Northern Region">قرية الأمل - المنطقة الشمالية</p>
+            <div class="progress-section">
+              <div class="progress-header">
+                <span data-ar="التمويل" data-en="Funding">التمويل</span>
+                <span class="progress-percent">64%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:64%"></div>
+              </div>
+              <div class="progress-amounts">
+                <span class="amount-raised">$32,000</span>
+                <span class="amount-goal" data-ar="من $50,000" data-en="of $50,000">من $50,000</span>
+              </div>
+            </div>
+            <a href="donate.html?project=1" class="btn btn-primary btn-full" data-ar="تبرع للمشروع" data-en="Donate to Project">تبرع للمشروع</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-status="active">
+          <div class="project-img-wrap">
+            <img src="https://images.pexels.com/photos/210764/pexels-photo-210764.jpeg" alt="جسر المستقبل" class="project-img" loading="lazy">
+            <span class="status-badge status-active" data-ar="نشط" data-en="Active">نشط</span>
+          </div>
+          <div class="project-content">
+            <h3 data-ar="جسر المستقبل" data-en="Bridge of the Future">جسر المستقبل</h3>
+            <p class="project-location" data-ar="وادي النخيل - المنطقة الوسطى" data-en="Palm Valley - Central Region">وادي النخيل - المنطقة الوسطى</p>
+            <div class="progress-section">
+              <div class="progress-header">
+                <span data-ar="التمويل" data-en="Funding">التمويل</span>
+                <span class="progress-percent">72%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:72%"></div>
+              </div>
+              <div class="progress-amounts">
+                <span class="amount-raised">$87,000</span>
+                <span class="amount-goal" data-ar="من $120,000" data-en="of $120,000">من $120,000</span>
+              </div>
+            </div>
+            <a href="donate.html?project=2" class="btn btn-primary btn-full" data-ar="تبرع للمشروع" data-en="Donate to Project">تبرع للمشروع</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-status="urgent">
+          <div class="project-img-wrap">
+            <img src="https://images.pexels.com/photos/1637227/pexels-photo-1637227.jpeg" alt="طريق الجبل الأخضر" class="project-img" loading="lazy">
+            <span class="status-badge status-urgent" data-ar="مستعجل" data-en="Urgent">مستعجل</span>
+          </div>
+          <div class="project-content">
+            <h3 data-ar="طريق الجبل الأخضر" data-en="Green Mountain Road">طريق الجبل الأخضر</h3>
+            <p class="project-location" data-ar="جبل الأخضر - المنطقة الشرقية" data-en="Green Mountain - Eastern Region">جبل الأخضر - المنطقة الشرقية</p>
+            <div class="progress-section">
+              <div class="progress-header">
+                <span data-ar="التمويل" data-en="Funding">التمويل</span>
+                <span class="progress-percent" style="color:#dc2626">19%</span>
+              </div>
+              <div class="progress-bar urgent">
+                <div class="progress-fill" style="width:19%"></div>
+              </div>
+              <div class="progress-amounts">
+                <span class="amount-raised">$15,000</span>
+                <span class="amount-goal" data-ar="من $80,000" data-en="of $80,000">من $80,000</span>
+              </div>
+            </div>
+            <a href="donate.html?project=3" class="btn btn-primary btn-full" style="background:#dc2626" data-ar="تبرع للمشروع" data-en="Donate to Project">تبرع للمشروع</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-status="completed">
+          <div class="project-img-wrap">
+            <img src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg" alt="طريق الساحل" class="project-img" loading="lazy">
+            <span class="status-badge" style="background:#dcfce7;color:#16a34a" data-ar="مكتمل" data-en="Completed">مكتمل</span>
+          </div>
+          <div class="project-content">
+            <h3 data-ar="طريق الساحل" data-en="Coastal Highway">طريق الساحل</h3>
+            <p class="project-location" data-ar="الساحل الغربي" data-en="Western Coast">الساحل الغربي</p>
+            <div class="progress-section">
+              <div class="progress-header">
+                <span data-ar="التمويل" data-en="Funding">التمويل</span>
+                <span class="progress-percent">100%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:100%"></div>
+              </div>
+              <div class="progress-amounts">
+                <span class="amount-raised">$150,000</span>
+                <span class="amount-goal" data-ar="من $150,000" data-en="of $150,000">من $150,000</span>
+              </div>
+            </div>
+            <button class="btn btn-full" style="background:#dcfce7;color:#16a34a" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-ar="تم الإنجاز" data-en="Completed">تم الإنجاز</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>طريق الخير</span>
+          </div>
+          <p class="footer-tagline">منظمة غير ربحية تهدف لتمويل بناء وصيانة الطرق للتجمعات النائية</p>
+        </div>
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <nav>
+            <a href="projects.html">المشاريع</a>
+            <a href="about.html">من نحن</a>
+            <a href="donate.html">تبرع</a>
+            <a href="contact.html">اتصل بنا</a>
+          </nav>
+        </div>
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <p>info@roadofgoodness.org</p>
+          <p dir="ltr">+966 50 123 4567</p>
+        </div>
+        <div class="footer-social">
+          <h4>تابعنا</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 طريق الخير. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

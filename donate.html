@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-ar="تبرع الآن - طريق الخير" data-en="Donate Now - Road of Goodness">تبرع الآن - طريق الخير</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <span class="logo-text" data-ar="طريق الخير" data-en="Road of Goodness">طريق الخير</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="projects.html" class="nav-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+        <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="langText">EN</span>
+        </button>
+        <a href="donate.html" class="btn btn-primary active" data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="projects.html" class="mobile-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+        <a href="about.html" class="mobile-link" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="mobile-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+        <button class="lang-toggle mobile-lang" id="mobileLangToggle"><span id="mobileLangText">English</span></button>
+        <a href="donate.html" class="btn btn-primary" data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="donate-page">
+    <div class="container">
+      <div class="donate-grid">
+        <!-- Left: Donation Form -->
+        <div>
+          <h1 data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</h1>
+          <p class="section-desc" data-ar="اختر المبلغ والمشروع، سيتم معالجة تبرعك بأمان" data-en="Choose the amount and project, your donation will be securely processed">اختر المبلغ والمشروع، سيتم معالجة تبرعك بأمان</p>
+
+          <form class="donation-form">
+            <!-- Amount Selection -->
+            <div class="form-group">
+              <label class="form-label" data-ar="اختر المبلغ" data-en="Select Amount">اختر المبلغ</label>
+              <div class="amount-grid">
+                <button type="button" class="amount-btn active" data-amount="50">$50</button>
+                <button type="button" class="amount-btn" data-amount="100">$100</button>
+                <button type="button" class="amount-btn" data-amount="250">$250</button>
+                <button type="button" class="amount-btn" data-amount="500">$500</button>
+                <button type="button" class="amount-btn" data-amount="1000">$1000</button>
+              </div>
+              <div class="custom-input-wrap">
+                <input type="number" id="customAmount" class="custom-input" placeholder="مبلغ مخصص" min="1">
+                <span class="currency-symbol">$</span>
+              </div>
+            </div>
+
+            <!-- Project Selection -->
+            <div class="form-group">
+              <label class="form-label" data-ar="اختر المشروع (اختياري)" data-en="Select Project (Optional)">اختر المشروع (اختياري)</label>
+              <select id="projectSelect" class="form-select">
+                <option value="" data-ar="صندوق التبرعات العام" data-en="General Donation Fund">صندوق التبرعات العام</option>
+                <option value="1" data-ar="طريق قرية الأمل" data-en="Village of Hope Road">طريق قرية الأمل</option>
+                <option value="2" data-ar="جسر المستقبل" data-en="Bridge of the Future">جسر المستقبل</option>
+                <option value="3" data-ar="طريق الجبل الأخضر" data-en="Green Mountain Road">طريق الجبل الأخضر</option>
+              </select>
+            </div>
+
+            <!-- Recurring Toggle -->
+            <div class="recurring-toggle">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="toggle-icon">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <div>
+                <p class="form-label" style="margin-bottom:0" data-ar="تبرع شهري" data-en="Monthly Donation">تبرع شهري</p>
+                <p style="font-size:0.875rem;color:var(--color-text-secondary)" data-ar="ساهم بشكل مستمر لدعم المشاريع" data-en="Contribute regularly to support projects">ساهم بشكل مستمر لدعم المشاريع</p>
+              </div>
+              <div class="toggle-switch" id="recurringToggle"></div>
+            </div>
+
+            <!-- Donor Info -->
+            <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div>
+                <label class="form-label" data-ar="الاسم (اختياري)" data-en="Name (Optional)">الاسم (اختياري)</label>
+                <input type="text" id="donorName" class="form-input" placeholder="أدخل اسمك">
+              </div>
+              <div>
+                <label class="form-label" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                <input type="email" id="donorEmail" class="form-input" placeholder="example@email.com" dir="ltr" required>
+              </div>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="form-group">
+              <label class="form-label" data-ar="معلومات الدفع" data-en="Payment Information">معلومات الدفع</label>
+              <div class="payment-card">
+                <div class="form-group" style="margin-bottom:1rem">
+                  <label style="font-size:0.75rem;color:var(--color-text-secondary)" data-ar="رقم البطاقة" data-en="Card Number">رقم البطاقة</label>
+                  <div class="card-input-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                      <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                    <input type="text" class="card-input" placeholder="4242 4242 4242 4242" maxlength="19" dir="ltr">
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+                  <div>
+                    <label style="font-size:0.75rem;color:var(--color-text-secondary)" data-ar="تاريخ الانتهاء" data-en="Expiry Date">تاريخ الانتهاء</label>
+                    <input type="text" class="form-input" placeholder="MM/YY" maxlength="5" dir="ltr">
+                  </div>
+                  <div>
+                    <label style="font-size:0.75rem;color:var(--color-text-secondary)">CVV</label>
+                    <input type="text" class="form-input" placeholder="123" maxlength="4" dir="ltr">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Digital Wallets -->
+              <div class="wallets">
+                <button type="button" class="wallet-btn wallet-apple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-3.06.03-3.85-1.68-5.86-1.68-2.02 0-2.88 1.65-5.91 1.7-1.35-.02-2.39-1.36-3.25-2.6C-.05 16.73-.41 11.21 2.08 8.17c1.22-1.5 3.08-2.45 5.02-2.47 3-.03 4.89 1.7 5.93 1.7 1.02 0 2.84-2.17 5.22-2.17.87 0 3.62.33 5.22 3.08-4.57 2.6-3.97 9.22.24 11.19z"/>
+                  </svg>
+                  Apple Pay
+                </button>
+                <button type="button" class="wallet-btn wallet-google">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                  Google Pay
+                </button>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="donateBtn" class="btn btn-accent btn-lg btn-full">
+              <span data-ar="تبرع" data-en="Donate">تبرع</span>
+              <span class="display-amount">$100</span>
+              <span id="recurringText"></span>
+            </button>
+
+            <!-- Trust Badge -->
+            <div class="trust-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-ar="سيصلك إيصال على بريدك الإلكتروني فوراً بعد إتمام التبرع" data-en="You will receive a receipt via email immediately after completing the donation">سيصلك إيصال على بريدك الإلكتروني فوراً بعد إتمام التبرع</span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div>
+          <!-- Donation Summary -->
+          <div class="sidebar-card">
+            <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:1rem" data-ar="ملخص التبرع" data-en="Donation Summary">ملخص التبرع</h3>
+            <div class="summary-row">
+              <span data-ar="المبلغ" data-en="Amount">المبلغ</span>
+              <span class="display-amount" style="font-weight:600;color:var(--color-primary-900)">$100</span>
+            </div>
+            <div class="summary-row">
+              <span data-ar="النوع" data-en="Type">النوع</span>
+              <span class="display-type" style="font-weight:600">مرة واحدة</span>
+            </div>
+            <div class="summary-row total">
+              <span data-ar="المجموع" data-en="Total">المجموع</span>
+              <span class="display-amount" style="font-size:1.125rem;color:var(--color-primary-900)">$100</span>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="sidebar-card">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+              <div style="width:40px;height:40px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <p style="font-weight:600;font-size:0.875rem" data-ar="دفع آمن" data-en="Secure Payment">دفع آمن</p>
+                <p style="font-size:0.75rem;color:var(--color-text-secondary)">SSL 256-bit encryption</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+              <div style="width:40px;height:40px;background:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <div>
+                <p style="font-weight:600;font-size:0.875rem" data-ar="حماية المعاملات" data-en="Transaction Protection">حماية المعاملات</p>
+                <p style="font-size:0.75rem;color:var(--color-text-secondary)">PCI DSS Compliant</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem">
+              <div style="width:40px;height:40px;background:#fef3c7;border-radius:50%;display:flex;align-items:center;justify-content:center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <p style="font-weight:600;font-size:0.875rem" data-ar="إيصال فوري" data-en="Instant Receipt">إيصال فوري</p>
+                <p style="font-size:0.75rem;color:var(--color-text-secondary)" data-ar="لأغراض ضريبية" data-en="For tax purposes">لأغراض ضريبية</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dev Note -->
+          <div style="background:#fefce8;border:1px solid #fde047;border-radius:var(--radius-card);padding:1rem">
+            <div style="display:flex;align-items:start;gap:0.5rem">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a16207" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <p style="font-size:0.875rem;color:#a16207" data-ar="ملاحظة: للتشغيل الفعلي، يُرجى دمج Stripe.js / PayPal / بطابة محلية (PayTabs, HyperPay)" data-en="Note: For production, integrate Stripe.js / PayPal / local gateway (PayTabs, HyperPay)">ملاحظة: للتشغيل الفعلي، يُرجى دمج Stripe.js / PayPal / بطابة محلية (PayTabs, HyperPay)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top:0">
+        <p data-ar="© 2024 طريق الخير. جميع الحقوق محفوظة." data-en="© 2024 Road of Goodness. All rights reserved.">© 2024 طريق الخير. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Receipt Modal -->
+  <div class="modal-overlay" id="receiptModal">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h2 class="modal-title" data-ar="شكراً لتبرعك الكريم!" data-en="Thank You for Your Donation!">شكراً لتبرعك الكريم!</h2>
+      <div class="receipt-info">
+        <div class="receipt-row">
+          <span data-ar="رقم الإيصال" data-en="Receipt #">رقم الإيصال</span>
+          <span id="receiptNumber" style="font-family:monospace;font-weight:600">RD-2024-000000</span>
+        </div>
+        <div class="receipt-row">
+          <span data-ar="الاسم" data-en="Name">الاسم</span>
+          <span id="receiptDonor" style="font-weight:600">Anonymous</span>
+        </div>
+        <div class="receipt-row">
+          <span data-ar="المبلغ" data-en="Amount">المبلغ</span>
+          <span id="receiptAmount" style="font-weight:700;color:var(--color-primary-900)">$100</span>
+        </div>
+        <div class="receipt-row">
+          <span data-ar="المشروع" data-en="Project">المشروع</span>
+          <span id="receiptProject" style="font-weight:600">General Fund</span>
+        </div>
+        <div class="receipt-row">
+          <span data-ar="التاريخ" data-en="Date">التاريخ</span>
+          <span id="receiptDate" style="font-weight:600">-</span>
+        </div>
+        <div class="receipt-row">
+          <span data-ar="الحالة" data-en="Status">الحالة</span>
+          <span style="color:#16a34a;display:flex;align-items:center;gap:0.25rem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span data-ar="تم الدفع بنجاح" data-en="Payment Successful">تم الدفع بنجاح</span>
+          </span>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="downloadReceipt">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span data-ar="تحميل الإيصال" data-en="Download Receipt">تحميل الإيصال</span>
+        </button>
+        <button class="btn btn-outline" style="background:var(--color-white);color:var(--color-text-primary)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span data-ar="مشاركة" data-en="Share">مشاركة</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

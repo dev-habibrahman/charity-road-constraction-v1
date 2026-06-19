@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-ar="من نحن - طريق الخير" data-en="About - Road of Goodness">من نحن - طريق الخير</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <span class="logo-text">طريق الخير</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="projects.html" class="nav-link" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+        <a href="about.html" class="nav-link active" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="langText">EN</span>
+        </button>
+        <a href="donate.html" class="btn btn-primary" data-ar="تبرع الآن" data-en="Donate Now">تبرع الآن</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="index.html" class="mobile-link">الرئيسية</a>
+        <a href="projects.html" class="mobile-link">المشاريع</a>
+        <a href="about.html" class="mobile-link active">من نحن</a>
+        <a href="contact.html" class="mobile-link">اتصل بنا</a>
+        <a href="donate.html" class="btn btn-primary">تبرع الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="about-hero">
+      <div class="container">
+        <h1 class="about-title" data-ar="من نحن" data-en="About Us">من نحن</h1>
+        <p class="about-intro" data-ar="طريق الخير هي منظمة غير ربحية تأسست عام 2018 بهدف تمويل بناء وصيانة الطرق للتجمعات النائية" data-en="Road of Goodness is a non-profit organization founded in 2018 to fund road construction and maintenance for underserved communities">طريق الخير هي منظمة غير ربحية تأسست عام 2018 بهدف تمويل بناء وصيانة الطرق للتجمعات النائية</p>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="story-section">
+          <div>
+            <h2 class="section-title" data-ar="قصتنا" data-en="Our Story">قصتنا</h2>
+            <p style="color:var(--color-text-secondary);margin-bottom:1rem;line-height:1.8" data-ar="بدأت طريق الخير كمبادرة صغيرة من مجموعة من المهندسين والمتطوعين الذين شاهدوا معاناة المجتمعات النائية في الوصول للخدمات الأساسية بسبب غياب الطرق الصالحة." data-en="Road of Goodness started as a small initiative by a group of engineers and volunteers who witnessed the suffering of remote communities in accessing basic services due to lack of proper roads.">بدأت طريق الخير كمبادرة صغيرة من مجموعة من المهندسين والمتطوعين الذين شاهدوا معاناة المجتمعات النائية في الوصول للخدمات الأساسية بسبب غياب الطرق الصالحة.</p>
+            <p style="color:var(--color-text-secondary);margin-bottom:1.5rem;line-height:1.8" data-ar="المنظمة مسجلة رسمياً برقم (12345) لدى وزارة الموارد البشرية والتنمية الاجتماعية، وتعمل وفق أهداف واضحة لخدمة المجتمعات النائية. حتى الآن، أنجزنا أكثر من 25 مشروعاً لصالح أكثر من 50 ألف مستفيد." data-en="The organization is officially registered under number (12345) with the Ministry of Human Resources and Social Development, working towards clear objectives to serve remote communities. To date, we have completed over 25 projects benefiting more than 50,000 people.">المنظمة مسجلة رسمياً برقم (12345) لدى وزارة الموارد البشرية والتنمية الاجتماعية، وتعمل وفق أهداف واضحة لخدمة المجتمعات النائية. حتى الآن، أنجزنا أكثر من 25 مشروعاً لصالح أكثر من 50 ألف مستفيد.</p>
+            <div style="display:flex;gap:2rem">
+              <div style="display:flex;align-items:center;gap:0.75rem">
+                <div style="width:48px;height:48px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div>
+                  <p style="font-weight:700">2018</p>
+                  <p style="font-size:0.875rem;color:var(--color-text-secondary)" data-ar="سنة التأسيس" data-en="Founded">سنة التأسيس</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.75rem">
+                <div style="width:48px;height:48px;background:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </div>
+                <div>
+                  <p style="font-weight:700">12345</p>
+                  <p style="font-size:0.875rem;color:var(--color-text-secondary)" data-ar="الرقم الترخيص" data-en="License #">الرقم الترخيص</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="position:relative">
+            <img src="https://images.pexels.com/photos/1117210/pexels-photo-1117210.jpeg" alt="فريق العمل" class="story-img" loading="lazy">
+            <div style="position:absolute;bottom:-1rem;left:-1rem;background:var(--color-accent);color:var(--color-primary-900);padding:1rem;border-radius:var(--radius-card);box-shadow:var(--shadow-card)">
+              <p style="font-size:2rem;font-weight:700">25+</p>
+              <p style="font-size:0.875rem;font-weight:600" data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section section-primary">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+          <div style="background:rgba(255,255,255,0.1);border-radius:var(--radius-card);padding:2rem">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9A825" stroke-width="2" style="margin-bottom:1rem">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+            <h3 style="font-size:1.5rem;font-weight:700;color:var(--color-white);margin-bottom:0.75rem" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h3>
+            <p style="color:rgba(255,255,255,0.8);line-height:1.8" data-ar="مجتمعات مترابطة بطرق آمنة تمكن الجميع من الوصول للخدمات الأساسية والفرص الاقتصادية" data-en="Connected communities with safe roads enabling everyone to access essential services and economic opportunities">مجتمعات مترابطة بطرق آمنة تمكن الجميع من الوصول للخدمات الأساسية والفرص الاقتصادية</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:var(--radius-card);padding:2rem">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F9A825" stroke-width="2" style="margin-bottom:1rem">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <h3 style="font-size:1.5rem;font-weight:700;color:var(--color-white);margin-bottom:0.75rem" data-ar="مهمتنا" data-en="Our Mission">مهمتنا</h3>
+            <p style="color:rgba(255,255,255,0.8);line-height:1.8" data-ar="تمويل بناء وصيانة الطرق للتجمعات النائية بشفافية وفعالية، مع إشراك المجتمعات المحلية في العملية" data-en="Funding road construction and maintenance for remote communities with transparency and efficiency, engaging local communities in the process">تمويل بناء وصيانة الطرق للتجمعات النائية بشفافية وفعالية، مع إشراك المجتمعات المحلية في العملية</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-ar="فريق القيادة" data-en="Leadership Team">فريق القيادة</h2>
+          <p class="section-desc" data-ar="نخبة من الخبراء يديرون المنظمة بحكمة وشفافية" data-en="A team of experts managing the organization with wisdom and transparency">نخبة من الخبراء يديرون المنظمة بحكمة وشفافية</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="أحمد الغامدي" class="team-img">
+            <div class="team-info">
+              <p class="team-name" data-ar="أحمد الغامدي" data-en="Ahmed Al-Ghamdi">أحمد الغامدي</p>
+              <p class="team-role" data-ar="المدير التنفيذي" data-en="CEO">المدير التنفيذي</p>
+            </div>
+          </div>
+          <div class="team-card">
+            <img src="https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg" alt="فاطمة النعيمي" class="team-img">
+            <div class="team-info">
+              <p class="team-name" data-ar="فاطمة النعيمي" data-en="Fatima Al-Naeemi">فاطمة النعيمي</p>
+              <p class="team-role" data-ar="مديرة المشاريع" data-en="Projects Director">مديرة المشاريع</p>
+            </div>
+          </div>
+          <div class="team-card">
+            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" alt="خالد الشهري" class="team-img">
+            <div class="team-info">
+              <p class="team-name" data-ar="خالد الشهري" data-en="Khalid Al-Shehri">خالد الشهري</p>
+              <p class="team-role" data-ar="مدير المالية" data-en="Finance Director">مدير المالية</p>
+            </div>
+          </div>
+          <div class="team-card">
+            <img src="https://images.pexels.com/photos/3764367/pexels-photo-3764367.jpeg" alt="نورة العمري" class="team-img">
+            <div class="team-info">
+              <p class="team-name" data-ar="نورة العمري" data-en="Noura Al-Omari">نورة العمري</p>
+              <p class="team-role" data-ar="رئيسة الاتصال المجتمعي" data-en="Community Relations Head">رئيسة الاتصال المجتمعي</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fund Allocation -->
+    <section class="section section-light" style="background:#f3f4f6">
+      <div class="container">
+        <div class="story-section">
+          <div>
+            <h2 class="section-title" data-ar="كيف تُستخدم التبرعات" data-en="How Donations Are Used">كيف تُستخدم التبرعات</h2>
+            <p style="color:var(--color-text-secondary);margin-bottom:1.5rem;line-height:1.8" data-ar="نضمن أن كل تبرع يحترم ويُستخدم بشفافية تامة. الشفافية ركيزة أساسية في عملنا." data-en="We ensure every donation is respected and used with complete transparency. Transparency is a cornerstone of our work.">نضمن أن كل تبرع يحترم ويُستخدم بشفافية تامة. الشفافية ركيزة أساسية في عملنا.</p>
+            <div class="fund-bars">
+              <div class="fund-bar-item">
+                <div class="fund-bar-header">
+                  <span data-ar="المواد والمعدات" data-en="Materials & Equipment">المواد والمعدات</span>
+                  <span style="font-weight:600;color:var(--color-primary-900)">60%</span>
+                </div>
+                <div class="fund-bar">
+                  <div style="width:60%;height:100%;background:var(--color-primary-900);border-radius:999px"></div>
+                </div>
+              </div>
+              <div class="fund-bar-item">
+                <div class="fund-bar-header">
+                  <span data-ar="العمالة" data-en="Labor">العمالة</span>
+                  <span style="font-weight:600;color:var(--color-primary-900)">25%</span>
+                </div>
+                <div class="fund-bar">
+                  <div style="width:25%;height:100%;background:var(--color-accent);border-radius:999px"></div>
+                </div>
+              </div>
+              <div class="fund-bar-item">
+                <div class="fund-bar-header">
+                  <span data-ar="إدارية" data-en="Administrative">إدارية</span>
+                  <span style="font-weight:600;color:var(--color-primary-900)">10%</span>
+                </div>
+                <div class="fund-bar">
+                  <div style="width:10%;height:100%;background:#3b82f6;border-radius:999px"></div>
+                </div>
+              </div>
+              <div class="fund-bar-item">
+                <div class="fund-bar-header">
+                  <span data-ar="طوارئ" data-en="Emergency Fund">طوارئ</span>
+                  <span style="font-weight:600;color:var(--color-primary-900)">5%</span>
+                </div>
+                <div class="fund-bar">
+                  <div style="width:5%;height:100%;background:#ef4444;border-radius:999px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--color-white);border-radius:var(--radius-card);padding:2rem;box-shadow:var(--shadow-card)">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-900)" stroke-width="2" style="margin-bottom:1rem">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+              <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+            </svg>
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:1rem" data-ar="نقيم مالية الشفافية" data-en="Financial Transparency">نقيم مالية الشفافية</h3>
+            <ul style="color:var(--color-text-secondary);line-height:2">
+              <li style="display:flex;align-items:center;gap:0.5rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-ar="تقارير مالية سنوية منشورة" data-en="Annual financial reports published">تقارير مالية سنوية منشورة</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:0.5rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-ar="مراجعة من مكتب محاسبة خارجي" data-en="Reviewed by external accounting firm">مراجعة من مكتب محاسبة خارجي</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:0.5rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-ar="إيصالات لكل تبرع" data-en="Receipts for every donation">إيصالات لكل تبرع</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:0.5rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span data-ar="تتبع أثر كل تبرع" data-en="Impact tracking for every donation">تتبع أثر كل تبرع</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>طريق الخير</span>
+          </div>
+          <p class="footer-tagline">منظمة غير ربحية تهدف لتمويل بناء وصيانة الطرق للتجمعات النائية</p>
+        </div>
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <nav>
+            <a href="projects.html">المشاريع</a>
+            <a href="about.html">من نحن</a>
+            <a href="donate.html">تبرع</a>
+            <a href="contact.html">اتصل بنا</a>
+          </nav>
+        </div>
+        <div class="footer-contact">
+          <h4>تواصل معنا</h4>
+          <p>info@roadofgoodness.org</p>
+          <p dir="ltr">+966 50 123 4567</p>
+        </div>
+        <div class="footer-social">
+          <h4>تابعنا</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 طريق الخير. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
